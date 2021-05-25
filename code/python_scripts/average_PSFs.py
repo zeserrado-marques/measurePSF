@@ -1,11 +1,10 @@
 import re
 import PyPDF2
 import glob
-
 from PyPDF2 import pdf
 from wave_psf_objects import wave_psf
 
-# gets x, y and z values from pdf files 
+# gets x, y and z values from pdf files
 def getPsfValues(text):
     x_fwhm = re.findall('resolution.*x(\d.\d*) .m', text)
     x_fwhm = float(x_fwhm[0])
@@ -28,7 +27,7 @@ for path in pdf_path_list[:n_waves]:
     waves_dict[f'{wave_re[0]}'] = wave_psf(wave_re[0])
 
 
-# retrieve FHWM values from PDF files
+# get psf values from PDF files
 for path in pdf_path_list:
     pdf_object = open(path,'rb')
 
@@ -47,17 +46,19 @@ for path in pdf_path_list:
         microscope = mic_type[0]
         #print(microscope)
 
+    # add psf values (fhwm at x, y and z) in current pdf file to correspondent wave object
     for wave in waves_dict:
         if wave in path:
             wave_obj = waves_dict[wave]
             wave_obj.addvalues(getPsfValues(text_pdf))
-            
+            break
+
 # calculate averages
 for wave in waves_dict:
     wave_obj = waves_dict[wave]
     wave_obj.getmeans()
 
-# get top dir 
+# get top dir
 full_path = pdf_path_list[0]
 top_dir = full_path[0:full_path.find('\\') + 1]
 
