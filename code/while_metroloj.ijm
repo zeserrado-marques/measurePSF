@@ -11,7 +11,7 @@
  * Author: José Serrado Marques
  * Date: 2021/05
  *
- *My advice:
+ * My advice:
  * - Create a folder a priori with the month of the measurement. example: "2021-05"
  * - Have a good image file name. example: "PS-speck_100x". Macro will add wavelength to the final PDF file
  *
@@ -40,7 +40,7 @@ Dialog.show();
 // variables
 mic_type = Dialog.getChoice();
 num_ape = Dialog.getNumber();
-objective = Dialog.getChoice();
+objective = Dialog.getChoice();
 
 // wavelength box
 wavelengths = dialogWavelengthChoices(channels);
@@ -49,7 +49,7 @@ wavelengths = dialogWavelengthChoices(channels);
 input = getDir("folder to save PSF info PDFs");
 output = input + File.separator + objective;
 File.makeDirectory(output);
-selectImage(imgID);
+selectImage(imgID);
 
 // user selects bead to measure PSF. yellow ROI is current bead, red ROIs are measured beads
 start_while = true;
@@ -68,7 +68,7 @@ while (start_while) {
 	getSelectionBounds(x, y, width, height);
 	if (x != 0 || y != 0) {
 		// code to measure the beads
-		print("ROI detected. Measuring PSF number " + psf_number);
+		print("ROI detected. Measuring PSF number " + psf_number);
 		runPSFmeasureBaby(psf_number, wavelengths, num_ape, mic_type, output);
 
 		// pretty rois as overlay to see calculated beads
