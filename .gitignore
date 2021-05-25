@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# others
+/python_scripts/pdfs_psf
+/pdfs_psf
