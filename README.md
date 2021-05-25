@@ -12,7 +12,7 @@ It can handle up to 4 different channels.
 Output are PDF files with PSF measurements.
 
 ### Python
-- *average_PSFs.py* and *wave_psf_objects.py* need to be in the same directory
+- *average_PSFs.py* and *wave_psf_objects.py* need to be in the same directory.
 - Create a directory called *pdfs_psf* in the same directory as the python scripts.
 - Copy those PDF files into *pdfs_psf*.
 - Run the *average_PSFs.py* script.
