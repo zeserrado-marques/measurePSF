@@ -1,2 +1,25 @@
-# measurePSF
-Measure PSFs from image using Fiji with MetroloJ and python script to calculate averages
+# Measure PSF
+Measures PSFs from image using Fiji with MetroloJ and python script to calculate lateral and axial resolution averages.
+
+It can handle up to 4 different channels.
+
+## How to use
+
+### ImageJ
+- Open a PSF stack image in Fiji.
+- Process that image using the *while_metroloj.ijm* macro.
+
+Output are PDF files with PSF measurements.
+
+### Python
+- Create a directory called *pdfs_psf* in the same directory as the python scripts.
+- Copy those PDF files into *pdfs_psf*.
+- Run the *average_PSFs.py* script.
+
+Output is a text file with average measurements.
+
+## Dependencies
+- [MetroloJ](https://imagejdocu.tudor.lu/plugin/analysis/metroloj/start)
+- [PyPDF2](https://pypi.org/project/PyPDF2/)
+
+Please cite if you use it. Thanks :D
