@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # others
-/python_scripts/pdfs_psf
-/pdfs_psf
+code/python_scripts/pdfs_psf
+code/pdfs_psf
