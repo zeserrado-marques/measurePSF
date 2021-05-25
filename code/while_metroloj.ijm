@@ -1,5 +1,5 @@
 /*
- * Macro to facilitate PSF measurement with metroloJ. PSF image needs to be open.
+ * Macro to facilitate PSF measurement with metroloJ. PSF image needs to be open.
  * Currently works only for single channel images.
  *
  * Dependencies:
