@@ -21,6 +21,7 @@ Output is a text file with average measurements.
 
 ## Dependencies
 - [MetroloJ](https://imagejdocu.tudor.lu/plugin/analysis/metroloj/start)
+- Python 3
 - [PyPDF2](https://pypi.org/project/PyPDF2/)
 
 Please cite MetrojoJ and this repo if you use it. Thanks :D
