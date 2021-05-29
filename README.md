@@ -1,5 +1,5 @@
 # Measure PSF
-Measures PSFs from image using Fiji with MetroloJ and python script to calculate lateral and axial resolution averages.
+Measures PSFs from a 3D image using Fiji with MetroloJ and python script to calculate average lateral and axial resolution.
 
 It can handle up to 4 different channels.
 
