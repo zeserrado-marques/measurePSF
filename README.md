@@ -20,8 +20,8 @@ Output are PDF files with PSF measurements.
 Output is a text file with average measurements.
 
 ## Dependencies
+Python scripts use python3 syntax.
 - [MetroloJ](https://imagejdocu.tudor.lu/plugin/analysis/metroloj/start)
-- Python 3
 - [PyPDF2](https://pypi.org/project/PyPDF2/)
 
 Please cite MetrojoJ and this repo if you use it. Thanks :D
