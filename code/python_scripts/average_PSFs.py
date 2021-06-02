@@ -4,7 +4,7 @@ import glob
 from PyPDF2 import pdf
 from wave_psf_objects import wave_psf
 
-# gets x, y and z values from pdf files
+# gets x, y and z values from pdf files 
 def getPsfValues(text):
     x_fwhm = re.findall('resolution.*x(\d.\d*) .m', text)
     x_fwhm = float(x_fwhm[0])
@@ -52,20 +52,22 @@ for path in pdf_path_list:
             wave_obj = waves_dict[wave]
             wave_obj.addvalues(getPsfValues(text_pdf))
             break
-
+            
 # calculate averages
 for wave in waves_dict:
     wave_obj = waves_dict[wave]
     wave_obj.getmeans()
 
-# get top dir
+# get top dir 
 full_path = pdf_path_list[0]
 top_dir = full_path[0:full_path.find('\\') + 1]
+microscope = microscope.lower()
 
 # create and write file
-re_name_file = re.findall('.*\W(.*)_bead', pdf_path_list[0])
+re_name_file = re.findall('.*\\\(.*)_bead', pdf_path_list[0])
+
 name_file = re_name_file[0]
-psf_info_file = open(top_dir + f'{microscope}_psf_info for {name_file}.txt', 'w')
+psf_info_file = open(top_dir + f'{microscope} psf info for {name_file}.txt', 'w')
 
 for wave in waves_dict:
     current_wave = waves_dict[wave]
