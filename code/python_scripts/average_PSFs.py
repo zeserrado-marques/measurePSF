@@ -6,13 +6,13 @@ from wave_psf_objects import wave_psf
 
 # gets x, y and z values from pdf files 
 def getPsfValues(text):
-    x_fwhm = re.findall('resolution.*x(\d.\d*) .m', text)
+    x_fwhm = re.findall('resolution.*x(\d*.\d*) .m', text)
     x_fwhm = float(x_fwhm[0])
 
-    y_fwhm = re.findall('resolution.*y(\d.\d*) .m', text)
+    y_fwhm = re.findall('resolution.*y(\d*.\d*) .m', text)
     y_fwhm = float(y_fwhm[0])
 
-    z_fwhm = re.findall('resolution.*z(\d.\d*) .m', text)
+    z_fwhm = re.findall('resolution.*z(\d*.\d*) .m', text)
     z_fwhm = float(z_fwhm[0])
 
     return x_fwhm, y_fwhm, z_fwhm
